@@ -1,7 +1,21 @@
-@use "partials/variables.scss" as *;
-@use "partials/mixins.scss" as *;
+@use 'partials/variables.scss' as *;
+@use 'partials/mixins.scss' as *;
 
-h1 {
-    text-align: center;
-    color: lightcoral;
+.d-flex {
+  display: flex;
+}
+.d-flex.justify-between {
+  justify-content: space-between;
+}
+
+.d-flex.align-center {
+  align-items: center;
+}
+
+.container {
+  padding: 1.2rem 15rem;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
 }
