@@ -2,6 +2,7 @@
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
+import AppMainNavbar from './components/AppMainNavbar.vue';
 
 export default {
   data() {
@@ -10,6 +11,7 @@ export default {
   components: {
     AppHeader,
     AppMain,
+    AppMainNavbar,
     AppFooter,
   },
   methods: {},
@@ -19,7 +21,10 @@ export default {
 <template>
   <AppHeader />
 
-  <AppMain />
+  <main>
+    <AppMain />
+    <AppMainNavbar />
+  </main>
 
   <AppFooter />
 </template>
