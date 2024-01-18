@@ -19,3 +19,10 @@
 .text-uppercase {
   text-transform: uppercase;
 }
+.d-flex.wrap {
+  flex-wrap: wrap;
+}
+
+.d-flex.column {
+  flex-direction: column;
+}
