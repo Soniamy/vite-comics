@@ -1,5 +1,9 @@
 <script>
+import SingleCard from:'./components/SingleCard.vue';
 export default {
+  components:{
+    SingleCard
+  },
   data() {
     return {
       cards: [
@@ -99,6 +103,9 @@ export default {
 
       <section id="comics-container" class="container position-relative">
         <h2 class="title text-uppercase position-absolute">Current Series</h2>
+        <div class="comics-container d-flex wrap">
+          <SingleCard />
+        </div>
       </section>
     </section>
   </main>
