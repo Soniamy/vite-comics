@@ -18,9 +18,9 @@ export default {
 <style lang="scss" scoped>
 .background {
   background-color: rgb(28, 28, 28);
-  height: 250px;
+  height: 150px;
 }
 h1 {
-  margin-top: 80px;
+  margin-top: 35px;
 }
 </style>
