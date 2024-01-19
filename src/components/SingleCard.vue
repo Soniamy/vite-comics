@@ -48,5 +48,8 @@ export default {
       text-align: center;
     }
   }
+  &:hover img {
+    filter: contrast(1.5);
+  }
 }
 </style>
