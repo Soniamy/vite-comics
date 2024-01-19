@@ -4,6 +4,7 @@ export default {
 
   data() {
     return {
+      activeIndex: 1,
       navItems: [
         {
           text: 'Characters',
@@ -82,9 +83,10 @@ export default {
         <ul class="d-flex">
           <li
             class="text-uppercase d-flex"
-            :class="navItem.active ? 'active' : ''"
+            @click="activeIndex = index"
             v-for="(navItem, index) in navItems"
             :key="index"
+            :class="{ ' active': index == activeIndex }"
           >
             <a :href="navItem.url" :alt="navItem.text">{{ navItem.text }}</a>
           </li>
@@ -130,10 +132,6 @@ header {
           font-size: 0.7rem;
           font-weight: bold;
           color: $darker--icon--bg-color;
-
-          &:hover {
-            color: $secondary--color;
-          }
         }
       }
     }
