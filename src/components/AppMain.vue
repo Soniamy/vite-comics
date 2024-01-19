@@ -113,6 +113,9 @@ export default {
             :type="card.type"
           />
         </div>
+        <div class="btn-container d-flex justify-center">
+          <a href="#" class="btn text-uppercase">Load More</a>
+        </div>
       </section>
     </section>
   </main>
@@ -129,6 +132,8 @@ export default {
 #comics-container {
   background-color: $secondary--color;
   font-size: 0.7em;
+
+  .btn,
   .title {
     background-color: $complementary--color;
     display: inline-block;
@@ -141,6 +146,16 @@ export default {
   }
   .title.position-absolute {
     bottom: calc(100% - 1.2rem);
+  }
+  a.btn {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    color: $primary--color;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  .btn-container {
+    justify-content: center;
   }
 }
 </style>
