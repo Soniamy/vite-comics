@@ -1,8 +1,8 @@
 <script>
-import SingleCard from:'./components/SingleCard.vue';
+import SingleCard from './SingleCard.vue';
 export default {
-  components:{
-    SingleCard
+  components: {
+    SingleCard,
   },
   data() {
     return {
@@ -104,7 +104,14 @@ export default {
       <section id="comics-container" class="container position-relative">
         <h2 class="title text-uppercase position-absolute">Current Series</h2>
         <div class="comics-container d-flex wrap">
-          <SingleCard />
+          <SingleCard
+            v-for="(card, i) in cards"
+            :key="i"
+            :thumb="card.thumb"
+            :price="card.price"
+            :series="card.series"
+            :type="card.type"
+          />
         </div>
       </section>
     </section>
@@ -122,7 +129,6 @@ export default {
 #comics-container {
   background-color: $secondary--color;
   font-size: 0.7em;
-  height: 100vh;
   .title {
     background-color: $complementary--color;
     display: inline-block;
