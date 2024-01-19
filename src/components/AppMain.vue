@@ -94,18 +94,40 @@ export default {
 
 <template>
   <main>
-    <div class="background container"></div>
+    <section id="jumbotron">
+      <div class="background"></div>
+
+      <section id="comics-container" class="container position-relative">
+        <h2 class="title text-uppercase position-absolute">Current Series</h2>
+      </section>
+    </section>
   </main>
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/partials/variables.scss' as *;
 .background {
   background-image: url('public/jumbotron.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 350px;
 }
-h1 {
-  margin-top: 35px;
+#comics-container {
+  background-color: $secondary--color;
+  font-size: 0.7em;
+  height: 100vh;
+  .title {
+    background-color: $complementary--color;
+    display: inline-block;
+    padding: 0.7rem 0;
+
+    &.title {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  .title.position-absolute {
+    bottom: calc(100% - 1.2rem);
+  }
 }
 </style>
