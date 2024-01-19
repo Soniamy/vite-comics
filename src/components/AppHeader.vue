@@ -122,6 +122,7 @@ header {
 
         &.active {
           border-bottom: 3px solid $complementary--color;
+          cursor: pointer;
 
           a {
             color: $complementary--color;
